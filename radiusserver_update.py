@@ -10,7 +10,6 @@ password = getpass.getpass()
 with open('./cisco_list_edit.csv') as csvfile:
   reader = csv.reader(csvfile, delimiter=',')
   next(reader)
-  unreachable_ips = {}
   for row in reader: 
     try:
       net_connect = ConnectHandler(
